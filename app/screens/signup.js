@@ -7,7 +7,7 @@ export default class Signup extends React.Component {
     render() {
       return (
           <View style={styles.container}>
-            <Text>dsa</Text>
+            <Text>signup</Text>
           </View>
   
         );  

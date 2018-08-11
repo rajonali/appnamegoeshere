@@ -15,7 +15,7 @@ import { createMaterialTopTabNavigator } from 'react-navigation';
 
 import { Icon } from 'native-base'
 
-export default class Hub extends React.Component {
+export default class Splashscreen extends React.Component {
 
   static navigationOptions = {
 
@@ -28,7 +28,7 @@ export default class Hub extends React.Component {
       
       return (
           <View style={styles.container}>
-            <Text>hub</Text>
+            <Text>splashscreen</Text>
           </View>
   
         );  

@@ -7,7 +7,7 @@ export default class Tos extends React.Component {
     render() {
       return (
           <View style={styles.container}>
-            <Text>dsa</Text>
+            <Text>tos</Text>
           </View>
   
         );  

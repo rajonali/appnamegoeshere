@@ -7,7 +7,7 @@ export default class Profile extends React.Component {
     render() {
       return (
           <View style={styles.container}>
-            <Text>dsa</Text>
+            <Text>profile</Text>
           </View>
   
         );  

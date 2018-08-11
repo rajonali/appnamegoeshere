@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Image } from 'react-native';
-import { Container, Button, Text, Icon } from 'native-base';
+import { StyleSheet, Text, View } from 'react-native';
 
 
 export default class Signin extends React.Component {
@@ -8,10 +7,7 @@ export default class Signin extends React.Component {
     render() {
       return (
           <View style={styles.container}>
-            <Container>
-              <Image source={require('../res/light.png')} />
-              <Text>APPNAMEGOESHERE</Text>
-            </Container>
+            <Text>signin</Text>
           </View>
   
         );  
@@ -25,6 +21,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 50
   },
 });

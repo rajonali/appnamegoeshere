@@ -7,7 +7,7 @@ export default class Messages extends React.Component {
     render() {
       return (
           <View style={styles.container}>
-            <Text>dsa</Text>
+            <Text>messages</Text>
           </View>
   
         );  
