@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 import {
@@ -10,37 +11,48 @@ import {
 
 import Profile from './profile'
 import Messages from './messages'
+import Search from './search'
+
 
 import { createMaterialTopTabNavigator } from 'react-navigation';
 
 import { Icon } from 'native-base'
 
 export default class Hub extends React.Component {
-
-  static navigationOptions = {
-
-    headerLeft: <Icon name="ios-contact" style={{ paddingLeft: 10 }} />,
-    title: "APPNAME",
-    headerRight: <Icon style={{ paddingRight: 10 }} name="ios-chatboxes" />
-  }
-
+    /** 
+    static navigationOptions = {
+        headerStyle: {
+        },
+        headerLeft: <Icon name="ios-contact" style={{ paddingLeft: 10, color: 'pink' }} />,
+        title: "Hub",
+        headerRight: <Icon style={{ paddingRight: 10, color: 'pink' }} name="ios-chatboxes" />,
+        position: 'absolute'
+        }
+    */
   render() {
       
       return (
           <View style={styles.container}>
-            <Text>hub</Text>
+            <View>
+            <Text>dsdas</Text>
+            <AppTabNavigator />
+            </View>
           </View>
   
         );  
     }
   }
-  
 
+
+    
 
   const AppTabNavigator = createMaterialTopTabNavigator({
 
     ProfileTab: {
         screen: Profile
+    },
+    Search: {
+        screen: Search
     },
     Messages: {
         screen: Messages
@@ -49,21 +61,38 @@ export default class Hub extends React.Component {
 }, {
         animationEnabled: true,
         swipeEnabled: true,
-        tabBarPosition: "bottom",
+        initialRouteName: 'Search',
+        tabBarPosition: "top",
+    
         tabBarOptions: {
-            style: {
-                ...Platform.select({
-                    android: {
-                        backgroundColor: 'white'
-                    }
-                })
+            tinColor: '#fff',
+            activeTintColor: '#eee',
+            inactiveTintColor: '#fff',
+            showIcon: true,
+            showLabel: true,
+            lazyLoad: false,
+            upperCaseLabel: false,
+            indicatorStyle: {
+            backgroundColor: 'green'
             },
-            activeTintColor: '#000',
-            inactiveTintColor: '#d1cece',
-            showLabel: false,
-            showIcon: true
-        }
-})
+
+
+            labelStyle :{
+            },
+
+            tabStyle: {
+            },
+                
+            style: {
+                backgroundColor: 'blue',
+                borderTopWidth: 3,
+                borderTopColor: 'black',
+            },
+
+
+        }   
+
+        })
 
 
 
@@ -76,8 +105,8 @@ export default class Hub extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'purple',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+  }
 });

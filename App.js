@@ -27,13 +27,26 @@ export default class App extends Component {
 
 
 const AppStackNavigator = createStackNavigator(
+  //Router Config
   {
-    Spash:{ screen: Splashscreen },
-    Hub:{ screen: Hub },
-    Signin:{ screen: Signin },
-    Signup:{ screen: Signup }
+    Hub: { 
+      screen: Hub
+    },
+    Spash: { 
+      screen: Splashscreen
+    },
+    Signin: { 
+      screen: Signin 
+    },
+    Signup: { 
+      screen: Signup 
+    }
+  },
 
-  }
+  //Visual options
+  {
+    headerMode: 'none'
+  },
 )
 
 
